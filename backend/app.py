@@ -1,8 +1,8 @@
+
 import http.server
 import socketserver
 
 PORT = 8080
-
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
@@ -17,7 +17,6 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
     def log_message(self, format, *args):
         print(f"[backend] {self.address_string()} - {format % args}")
-
 
 if __name__ == "__main__":
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
