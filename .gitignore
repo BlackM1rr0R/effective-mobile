@@ -7,9 +7,9 @@ Thumbs.db
 .vscode/
 *.swp
 
-# Docker
+# Docker logs
 *.log
 
-# Secrets — never commit real env files
+# Secrets
 .env.local
 .env.production
